@@ -35,10 +35,18 @@ export default class App extends Component {
     const recipes = JSON.parse(data);
     this.setState({ recipes: recipes });
   };
+  openCalulator = () => {
+    console.log("Calculator open");
+  };
   render() {
     return (
       <div className="App">
-        <header className="App-header">Search Recipe</header>
+        <header className="App-header">
+          <h1>Search Recipe</h1>
+          <button className="calculator-button" onClick={this.openCalulator}>
+            Calculator
+          </button>
+        </header>
         <Form getRecipe={this.getRecipe} />
         <Recipes recipes={this.state.recipes} />
       </div>
