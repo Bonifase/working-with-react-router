@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 const Recipes = props => (
   <div className="row">
-    {props.recipes.map(recipe => {
+    {/* {props.recipes.map(recipe => {
       return (
         <div className="col-md-4" key={recipe.recipe_id} style={{ marginBottom: "2rem" }}>
           <div className="recipes__box">
@@ -19,7 +19,7 @@ const Recipes = props => (
           </div>
         </div>
       );
-    })}
+    })} */}
   </div>
 );
 
