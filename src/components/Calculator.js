@@ -117,7 +117,7 @@ export default class Calculator extends Component {
               </button>
             </div>
 
-            <div class="rows">
+            <div className="rows">
               <button value="7" className="btn-style num-bg num first-child">
                 7
               </button>
