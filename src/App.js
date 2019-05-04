@@ -3,6 +3,7 @@ import Form from "./components/Form";
 import Recipes from "./components/Recipes";
 import "./App.css";
 import Calculator from "./components/Calculator";
+import Message from "./components/Message";
 
 const API_KEY = "4678a2d7b2b2fca31d3eb917358ad0d8";
 
@@ -48,7 +49,7 @@ export default class App extends Component {
           <Calculator />
         </header>
         <Form getRecipe={this.getRecipe} />
-        {this.state.error === "limit" ? emptyMessage : <Recipes recipes={this.state.recipes} />}
+        {this.state.error === "limit" ? <Message /> : <Recipes recipes={this.state.recipes} />}
       </div>
     );
   }
