@@ -37,7 +37,6 @@ export default class App extends Component {
     }
   };
   render() {
-    const emptyMessage = <h1>You have reached the API call limit</h1>;
     return (
       <div className="App">
         <header className="App-header">
@@ -49,7 +48,7 @@ export default class App extends Component {
           <Calculator />
         </header>
         <Form getRecipe={this.getRecipe} />
-        {this.state.error === "limit" ? <Message /> : <Recipes recipes={this.state.recipes} />}
+        {this.state.error.isEmpty === false ? <Message /> : <Recipes recipes={this.state.recipes} />}
       </div>
     );
   }
